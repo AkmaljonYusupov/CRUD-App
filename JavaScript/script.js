@@ -93,29 +93,31 @@ $(document).ready(function () {
               <div class="card-body">\
                 <div id="task-item" class="d-flex justify-content-between align-items-center">\
                   <div>\    
-                    <h5 class="card-title m-0">${task.name}</h5>\
+                    <h3 class="card-title m-0">${task.name}</h3>\
                     <div class="task-time">📅 Qo‘shilgan: ${formatTime(
 											task.createdAt
 										)}</div>\
                   </div>\
                   <div>\    
-                    <button class="btn btn-sm btn-success like-btn me-1" data-index="${index}">\
+                    <button class="btn btn-sm btn-success like-btn m-1" data-index="${index}">\
                       <i class="fas ${
 												task.liked ? 'fa-thumbs-up' : 'fa-thumbs-down'
 											}"></i>\
                     </button>\
-                    <button class="btn btn-sm btn-warning edit-btn me-1" data-index="${index}">\
+                    <button class="btn btn-sm btn-warning edit-btn m-1" data-index="${index}">\
                       <i class="fas fa-edit"></i>\
                     </button>\
-                    <button class="btn btn-sm btn-danger delete-btn" data-index="${index}">\
+                    <button class="btn btn-sm btn-danger delete-btn m-1" data-index="${index}">\
                       <i class="fas fa-trash-alt"></i>\
                     </button>\
-                    <button class="btn btn-sm btn-info complete-btn ${
+                    <button class="btn btn-sm btn-info complete-btn m-1 ${
 											task.completed ? 'completed-active' : ''
 										}" data-index="${index}">\
                       <i class="fas ${
 												task.completed ? 'fa-check' : 'fa-times'
-											}"></i> ${task.completed ? 'Bajarildi' : 'Bajarilmagan'}\
+											}"></i> <span>${
+				task.completed ? 'Bajarildi' : 'Bajarilmagan'
+			}</span> 
                     </button>\
                   </div>\
                 </div>\

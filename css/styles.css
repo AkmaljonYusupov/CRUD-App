@@ -6,7 +6,11 @@ body {
 
 .container {
 	margin-top: 40px;
-	max-width: 900px;
+	max-width: 1200px;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
 }
 
 .card {
@@ -77,16 +81,20 @@ body {
 	justify-content: space-between;
 	margin-bottom: 20px;
 	margin-top: 20px;
-	padding: 15px;
+	padding: 10px;
 	background-color: #ffffff;
 	border-radius: 12px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	gap: 5px;
 }
 
 .stat-item {
 	display: flex;
 	align-items: center;
 	font-size: 1.1rem;
+	padding: 25px;
+	background-color: #f8f9fa;
+	border-radius: 12px;
 }
 
 .stat-item i {
@@ -164,9 +172,12 @@ body {
 		padding: 10px;
 	}
 	#task-item {
-		flex-direction: column;
+		flex-wrap: wrap;
 		gap: 10px;
 		align-items: flex-start !important;
+	}
+	#task-item button span {
+		display: none;
 	}
 
 	.row input,
@@ -176,6 +187,9 @@ body {
 
 	.card-body {
 		padding: 10px;
+	}
+	#toastContainer {
+		width: 80%;
 	}
 }
 
@@ -193,10 +207,11 @@ body {
 
 	.stat-item {
 		font-size: 1rem;
+		padding: 20px;
 	}
 
 	.card-title {
-		font-size: 1.1rem;
+		font-size: 1.5rem;
 	}
 
 	.header-gradient h2 {
